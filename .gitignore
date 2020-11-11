@@ -1,5 +1,5 @@
 node_modules/**/*
-.expo/*
+
 npm-debug.*
 *.jks
 *.p8
@@ -14,3 +14,4 @@ web-build/
 
 #database user credentials
 dbuser.js
+node_modules
