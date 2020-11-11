@@ -4,13 +4,14 @@ This is a React Native project designed by Trey Roche, Alex Crane, Jalan Cruz, J
 
 
 How to install:
-Follow the instructions below under "**React Native CLI Quickstart**"
+Follow the instructions below under "**React Native CLI Quickstart**" 
+
 https://reactnative.dev/docs/environment-setup
 
 
 How to run:
 
-To run this application, you will need to have two command line windows open. On the first window, run the following command: 
+To run this application, you will need to have two command line windows open. On the **first window**, run the following command: 
 
 Windows users:
 ```
@@ -22,7 +23,7 @@ Mac users
 yarn react-native start
 ```
 
-On the second window, run the following command: 
+On the **second window**, run the following command: 
 
 Windows users:
 ```
