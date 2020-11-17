@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import HomePage from './HomePage.js';
 import {
   SafeAreaView,
   StyleSheet,
@@ -26,7 +27,10 @@ import {
 
 const App = () => {
   return (
+
+
     <>
+
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
@@ -45,6 +49,7 @@ const App = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> why did they make such a complicated default page
               </Text>
             </View>
+            <HomePage />
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
