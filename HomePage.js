@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
 
     buttons: {
-        flex: 1,
+
     },
 
 });
@@ -27,9 +27,9 @@ const HomePage = () => {
                 <Image style={styles.logo} source={require("TeamUpRN/src/images/csgo.png")} />
             </View>
             <View style={{ flex: 1, }}></View>
-            <View style={{ flex: 2, backgroundColor: 'purple', display: 'flex', flexDirection: 'row', }}>
-                <Button title="Login" />
-                <Button title="Sign Up" />
+            <View style={{ flex: 2, backgroundColor: 'purple', display: 'flex', }}>
+                <Button style={{ width: 500, height: 200, }} title="Login" />
+                <Button style={styles.buttons} title="Sign Up" />
             </View>
         </View >
 
