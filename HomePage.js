@@ -12,8 +12,11 @@ const styles = StyleSheet.create({
         // height: 50,
         // display: "flex",
     },
-
+    // css style for divs that change buttons size/where it is. react native is confusing
     buttons: {
+        // flex: 1,
+        padding: 5,
+        minHeight: 15,
 
     },
 
@@ -21,15 +24,19 @@ const styles = StyleSheet.create({
 
 const HomePage = () => {
     return (
-        <View style={{ flex: 1, }}>
-            <View style={{ flex: 2, backgroundColor: 'red', }}>
+        <View style={{ flex: 1, backgroundColor: 'black', }}>
+            <View style={{ flex: 3, }}>
 
                 <Image style={styles.logo} source={require("TeamUpRN/src/images/csgo.png")} />
             </View>
             <View style={{ flex: 1, }}></View>
-            <View style={{ flex: 2, backgroundColor: 'purple', display: 'flex', }}>
-                <Button style={{ width: 500, height: 200, }} title="Login" />
-                <Button style={styles.buttons} title="Sign Up" />
+            <View style={{ flex: 3, display: 'flex', }}>
+                <View style={styles.buttons}>
+                    <Button color="#DE9B35" style={{ width: 500, height: 200, }} title="Login" />
+                </View>
+                <View style={styles.buttons}>
+                    <Button color="#DE9B35" style={styles.buttons} title="Sign Up" />
+                </View>
             </View>
         </View >
 
