@@ -9,7 +9,8 @@
 
 {/* <script src="http://localhost:8097"></script> */ }
 import React from 'react';
-import HomePage from './HomePage.js';
+import HomePage from './src/components/HomePage.js';
+import CSGoHome from './src/components/CSGoHome.js';
 import {
   SafeAreaView,
   StyleSheet,
@@ -36,7 +37,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       {/* <SafeAreaView> */}
 
-      <HomePage />
+      <CSGoHome />
       {/* </SafeAreaView> */}
     </>
   );
