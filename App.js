@@ -17,6 +17,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
+import Profile from './src/components/profile.js';
+import Edit from './src/components/edit.js';
 import {
   SafeAreaView,
   StyleSheet,
