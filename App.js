@@ -42,20 +42,24 @@ const App = () => {
 
     <>
       {/* navigation stuff imported in */}
-      <NavigationContainer><StatusBar barStyle="dark-content" />
-        {/* <SafeAreaView> */}
+      {/* <NavigationContainer> */}
+      <StatusBar barStyle="dark-content" />
+      <CSGoHome />
 
-        <Stack.Navigator>
-          <Stack.Screen
+      {/* <SafeAreaView> */}
+
+      {/* <Stack.Navigator> */}
+      {/* <Stack.Screen
             name="HomePage"
             component={HomePage}>
 
           </Stack.Screen>
           <Stack.Screen name="CSGo" component={CSGoHome}>
 
-          </Stack.Screen>
-        </Stack.Navigator>
-        {/* </SafeAreaView> */}</NavigationContainer>
+          </Stack.Screen> */}
+      {/* </Stack.Navigator> */}
+      {/* </SafeAreaView>*/}
+      {/*</NavigationContainer> */}
     </>
   );
 };
