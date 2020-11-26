@@ -14,6 +14,7 @@ import HomePage from './src/components/HomePage.js';
 import CSGoHome from './src/components/CSGoHome.js';
 import Profile from './src/components/profile.js';
 import Edit from './src/components/edit.js';
+import Queue from './src/components/Queue.js';
 
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createStackNavigator } from '@react-navigation/stack';
@@ -48,7 +49,7 @@ class App extends Component {
         {/* navigation stuff imported in */}
         {/* <NavigationContainer> */}
         <StatusBar barStyle="dark-content" />
-        <Edit />
+        <Queue />
 
         {/* <SafeAreaView> */}
 
