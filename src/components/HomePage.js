@@ -22,27 +22,34 @@ const styles = StyleSheet.create({
 
 });
 
-const HomePage = () => {
-    return (
-        <View style={{ flex: 1, backgroundColor: 'black', }}>
-            <View style={{ flex: 3, }}>
+// const HomePage = () => {
+// needs to be extended from component for navigation to work
+class HomePage extends React.Component {
+    render() {
+        return (
+            <View style={{ flex: 1, backgroundColor: 'black', }}>
+                <View style={{ flex: 3, }}>
 
-                <Image style={styles.logo} source={require("TeamUpRN/src/images/csgo.png")} />
-            </View>
-            <View style={{ flex: 1, }}></View>
-            <View style={{ flex: 3, display: 'flex', }}>
-                <View style={styles.buttons}>
-                    <Button color="#DE9B35" style={{ width: 500, height: 200, }} title="Login" />
+                    <Image style={styles.logo} source={require("TeamUpRN/src/images/csgo.png")} />
                 </View>
-                <View style={styles.buttons}>
-                    <Button color="#DE9B35" style={styles.buttons} title="Sign Up" />
+                <View style={{ flex: 1, }}></View>
+                <View style={{ flex: 3, display: 'flex', }}>
+                    <View style={styles.buttons}>
+                        <Button color="#DE9B35" style={{ width: 500, height: 200, }}
+                            onPress={() =>
+                                // navigation for CSGo page. not final navigation site just to see if i can do it 
+                                this.props.navigation.navigate('CSGo')}
+                            title="Login" />
+                    </View>
+                    <View style={styles.buttons}>
+                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" />
+                    </View>
                 </View>
-            </View>
-        </View >
+            </View >
 
 
-    );
-
+        );
+    }
 };
 
 export default HomePage;

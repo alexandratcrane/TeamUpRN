@@ -8,9 +8,15 @@
 // script is to open the react native debugging tools. keep above react/react native imports
 
 {/* <script src="http://localhost:8097"></script> */ }
+import 'react-native-gesture-handler';
 import React from 'react';
 import HomePage from './src/components/HomePage.js';
 import CSGoHome from './src/components/CSGoHome.js';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -33,12 +39,21 @@ const App = () => {
 
 
     <>
+      {/* navigation stuff imported in */}
+      <NavigationContainer><StatusBar barStyle="dark-content" />
+        {/* <SafeAreaView> */}
 
-      <StatusBar barStyle="dark-content" />
-      {/* <SafeAreaView> */}
+        <Stack.Navigator>
+          <Stack.Screen
+            name="HomePage"
+            component={HomePage}>
 
-      <CSGoHome />
-      {/* </SafeAreaView> */}
+          </Stack.Screen>
+          <Stack.Screen name="CSGo" component={CSGoHome}>
+
+          </Stack.Screen>
+        </Stack.Navigator>
+        {/* </SafeAreaView> */}</NavigationContainer>
     </>
   );
 };
