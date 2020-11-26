@@ -8,17 +8,19 @@
 // script is to open the react native debugging tools. keep above react/react native imports
 
 {/* <script src="http://localhost:8097"></script> */ }
-import 'react-native-gesture-handler';
-import React from 'react';
+// import 'react-native-gesture-handler';
+import React, { Component } from 'react';
 import HomePage from './src/components/HomePage.js';
 import CSGoHome from './src/components/CSGoHome.js';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
-
 import Profile from './src/components/profile.js';
 import Edit from './src/components/edit.js';
+
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createStackNavigator } from '@react-navigation/stack';
+
+// const Stack = createStackNavigator();
+
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -36,20 +38,22 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App = () => {
-  return (
+// needs to be a component to hold components
+class App extends Component {
+  render() {
+    return (
 
 
-    <>
-      {/* navigation stuff imported in */}
-      {/* <NavigationContainer> */}
-      <StatusBar barStyle="dark-content" />
-      <CSGoHome />
+      <>
+        {/* navigation stuff imported in */}
+        {/* <NavigationContainer> */}
+        <StatusBar barStyle="dark-content" />
+        <Edit />
 
-      {/* <SafeAreaView> */}
+        {/* <SafeAreaView> */}
 
-      {/* <Stack.Navigator> */}
-      {/* <Stack.Screen
+        {/* <Stack.Navigator> */}
+        {/* <Stack.Screen
             name="HomePage"
             component={HomePage}>
 
@@ -57,11 +61,12 @@ const App = () => {
           <Stack.Screen name="CSGo" component={CSGoHome}>
 
           </Stack.Screen> */}
-      {/* </Stack.Navigator> */}
-      {/* </SafeAreaView>*/}
-      {/*</NavigationContainer> */}
-    </>
-  );
+        {/* </Stack.Navigator> */}
+        {/* </SafeAreaView>*/}
+        {/*</NavigationContainer> */}
+      </>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
