@@ -12,6 +12,7 @@ import React from 'react';
 import Profile from './src/components/Profile.js';
 import HomePage from './src/components/HomePage.js';
 import CSGoHome from './src/components/CSGoHome.js';
+import Profile from './src/components/profile.js';
 import {
   SafeAreaView,
   StyleSheet,
