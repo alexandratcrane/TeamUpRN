@@ -1,119 +1,66 @@
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Button } from 'react-native';
-//for the user back arrow icon this import below must be used
-import { Ionicons } from '@expo/vector-icons'
-//if we can't use expo icons, maybe this: import Icon from 'react-native-ionicons'
-//import for navigationOptions
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-//this part probably goes in App.js
-class ProfilePage extends React.Component
+<script src="http://localhost:8097"></script>
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
+
+
+
+const Profile = () =>
 {
-  static navigationOptions =
-  {
-    title: "Profile",
-    headerStyle:
+  const styles = StyleSheet.create({
+    imageCont:
     {
-      backgroundColor: "#808080",
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 20,
     },
-    headerTitleSytle:
-    {
-      fontWeight: "bold",
-    },
-  };
-  render()
-  {
-    return (
-      <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-        <Button
-            title="Edit Profile"
-            onPress={() => this.props.navigation.push('Edit')}
-        />
-      </View>
-
-    );
-  }
-}
-
-const AppNavigator = createStackNavigator (
-    {
-        Profile: ProfilePage,
-        Edit: EditPage
-    },
-    {
-        initialRouteName: "Home"
-    }
-);
-
-const AppContainer = createAppContainer(AppNavigator);
-
-export default class App extends React.Component
-{
-    render()
-    {
-        return <AppContainer />;
-    }
-}
-
-//the profile information
-const Profile = () => {
-    return (
-         <SafeAreaView style={styles.container}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-
-            <View style={styles.topBar}>
-              <Ionicons name="ios-arrow-back" size={20} color="#808080"></Ionicons>
-              <Text>Profile</Text>
-            </View>
-
-            <View style={styles.profileImage}>
-              <Image source={require('./src/images/profile.png')} style={styles.image} resizeMode="center"></Image>
-            </View>
-
-            <View style={styles.informationContainer}>
-              <Text style={[styles.text, { fontSize: 40 }]}>Username: </Text>
-              <Text style={[styles.text, { fontSize: 24 }]}>Rank: </Text>
-              <Text style={[styles.text, { fontSize: 24 }]}>Region: </Text>
-              <Text style={[styles.text, { fontSize: 24 }]}>Roles: </Text>
-            </View>
-       </ScrollView>
-     </SafeAreaView>
-      );
-    );
-   }
- export default Profile
-
-const styles = StyleSheet.create({
-    container:
-    {
-        flex: 1,
-        backgroundColor:"#000000"
-    },
+    image:
+  	{
+    	width: 150,
+    	height: 150,
+    	borderRadius: 200,
+      overflow:"hidden",
+  	},
+    informationContainer:
+  	{
+    	  flex: 1,
+        marginTop: 10,
+  	},
     text:
     {
       fontFamily: "sans-serif",
-      color: "#ffd700"
+      color: "#ffd700",
+      textAlign: 'left',
+      justifyContent: 'center',
     },
-    image:
+    buttonCont:
     {
-      flex: 1
+      justifyContent: 'center',
+      alignItems: 'center',
     },
-    topBar:
+    buttons:
     {
-      flexDirection: "row",
-      marginTop:30,
-      marginHorizontal:15
+      width: 100,
+      marginTop: 10,
+      marginBottom: 50,
     },
-    profileImage:
-    {
-      width: 150px,
-      height: 150px,
-      borderRadius: 50%,
-      overflow:"hidden"
-    },
-    informationContainer:
-    {
-      alignItems:"center",
-      alignSelf: "center",
-      marginTop:15
-    }
-});
+  });
+	return	(
+  	<View style={{ flex: 1, backgroundColor: 'black', }}>
+      	   <View style={styles.imageCont}>
+              <Image style={styles.image} source={require("TeamUpRN/src/images/profile.png")} />
+            </View>
+        	<View style={styles.informationContainer}>
+              <Text style={[styles.text, { fontSize: 50 }]}>Username:</Text>
+              <Text style={[styles.text, { fontSize: 40 }]}>Rank:</Text>
+              <Text style={[styles.text, { fontSize: 40 }]}>Region:</Text>
+              <Text style={[styles.text, { fontSize: 40 }]}>Roles:</Text>
+            </View>
+          <View style={styles.buttonCont}>
+              <View style={styles.buttons}>
+                  <Button title="Edit" color="#DE9835" />
+              </View>
+          </View>
+    	</View>
+  	);
+  }
+ export default Profile;
