@@ -1,4 +1,4 @@
-
+import 'react-native-gesture-handler';
 // script is to open the react native debugging tools. keep above react/react native imports
 <script src="http://localhost:8097"></script>
 import React, { Component } from 'react';
