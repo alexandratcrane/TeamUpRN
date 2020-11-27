@@ -1,39 +1,34 @@
-import { ObjectId } from "bson";
+import React, { Component } from "react";
 
-class Task {
+class Profile {
   /**
-   *
-   * @param {string} name The name of the task
-   * @param {string status The status of the task. Default value is "Open"
-   * @param {ObjectId} id The ObjectId to create this task with
+   * Creating a User profile
+   * @param {Object} profile - The User profile to be made
+   * @param {string} profile.username - Username of the profile
+   * @param {string} profile.role - The role of the user
+   * @param {string} profile.rank - The rank of the user
    */
+   
   constructor({
-    name,
-    partition,
-    status = Task.STATUS_OPEN,
-    id = new ObjectId(),
+    username,
+    role,
+    rank,
   }) {
-    this._partition = partition;
-    this.name = id;
-	this.mainRole = mainRole;
-    this.firstName = firstName;
-    this.status = status;
+    this.username = Username;
+    this.role = Role;
+	this.rank = Rank;
   }
-
-  static STATUS_OPEN = "Open";
-  static STATUS_IN_PROGRESS = "InProgress";
-  static STATUS_COMPLETE = "Complete";
   
   // TODO: implement schema
+  
   static schema = {
-  name: "User",
+  name: "Profile",
   properties: {
     Username: "string", 
-    role: "string", /* main roles can be support, entry fragger, flex */
-	rank: "string",
-    status: "string",
+    Role: "string", /* main roles can be support, entry fragger, flex */
+	Rank: "string",
   },
-  primaryKey: "name",
+  primaryKey: "Username",
 };
 
-export { Task };
+export { Profile };
