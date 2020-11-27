@@ -7,16 +7,19 @@ class Profile {
    * @param {string} profile.username - Username of the profile
    * @param {string} profile.role - The role of the user
    * @param {string} profile.rank - The rank of the user
+   * @param {string} profile.region - The region of the user
    */
    
   constructor({
     username,
     role,
     rank,
+	region,
   }) {
-    this.username = Username;
-    this.role = Role;
-	this.rank = Rank;
+    this.username = username;
+    this.role = role;
+	this.rank = rank;
+	this.region = region;
   }
   
   // TODO: implement schema
@@ -27,6 +30,7 @@ class Profile {
     Username: "string", 
     Role: "string", /* main roles can be support, entry fragger, flex */
 	Rank: "string",
+	Region: "string",
   },
   primaryKey: "Username",
 };
