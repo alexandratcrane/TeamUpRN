@@ -14,12 +14,12 @@ class Profile {
     username,
     role,
     rank,
-	region,
+    region,
   }) {
     this.username = username;
     this.role = role;
-	this.rank = rank;
-	this.region = region;
+    this.rank = rank;
+    this.region = region;
   }
   
   // TODO: implement schema
@@ -29,8 +29,8 @@ class Profile {
   properties: {
     Username: "string", 
     Role: "string", /* main roles can be support, entry fragger, flex */
-	Rank: "string",
-	Region: "string",
+    Rank: "string",
+    Region: "string",
   },
   primaryKey: "Username",
 };
