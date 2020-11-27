@@ -4,8 +4,8 @@ import OtherUser from './OtherUser.js';
 
 
 const styles = StyleSheet.create({
-    mainDiv: { backgroundColor: 'black', color: 'white', flex: 1, },
-    img: { flex: 1, },
+    mainDiv: { flex: 1, backgroundColor: 'black', color: 'white', flex: 1, alignItems: 'center', },
+    img: { width: 400, resizeMode: 'contain', },
 });
 
 
@@ -16,7 +16,7 @@ class Queue extends React.Component {
             <View style={styles.mainDiv} >
                 {/* image for the logo */}
                 <View>
-                    <Image source={require("TeamUpRN/src/images/csgo.png")} />
+                    <Image style={styles.img} source={require("TeamUpRN/src/images/csgo.png")} />
                 </View>
                 {/* maybe somebody can put data for each otheruser and another other user pops up for whoever is avail? */}
                 < OtherUser />
