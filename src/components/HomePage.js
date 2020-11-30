@@ -36,13 +36,11 @@ class HomePage extends React.Component {
                 <View style={{ flex: 3, display: 'flex', }}>
                     <View style={styles.buttons}>
                         <Button color="#DE9B35" style={{ width: 500, height: 200, }}
-                            onPress={() =>
-                                // navigation for CSGo page. not final navigation site just to see if i can do it 
-                                this.props.navigation.navigate('CSGo')}
+                            onPress={() =>this.props.navigation.navigate('CSGo')}
                             title="Login" />
                     </View>
                     <View style={styles.buttons}>
-                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up"}/>
+                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up"/>
                     </View>
                 </View>
             </View >
