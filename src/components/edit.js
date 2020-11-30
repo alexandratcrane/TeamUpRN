@@ -57,7 +57,7 @@ const Edit = () => {
               </View>
             <View style={styles.buttonCont}>
                 <View style={styles.buttons}>
-                    <Button title="Done" color="#DE9835" />
+                    <Button title="Done" color="#DE9835" onPress={() =>this.props.navigation.navigate('Profile')}/>
                 </View>
             </View>
       	</View>

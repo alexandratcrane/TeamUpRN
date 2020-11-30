@@ -24,10 +24,10 @@ const CSGoHome = () => {
             <View style={{ flex: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
 
                 <View style={styles.buttons}>
-                    <Button title="Find Players" color="#DE9835" />
+                    <Button title="Find Players" color="#DE9835" onPress={() =>this.props.navigation.navigate('Queue')}/>
                 </View>
                 <View style={styles.buttons}>
-                    <Button title="Profile" color="#DE9835" />
+                    <Button title="Profile" color="#DE9835" onPress={() =>this.props.navigation.navigate('Profile')}/>
                 </View>
                 {/* <TouchableOpacity style={{ height: 100, flex: 1, backgroundColor: 'red' , }}><Text>My buttons</Text></TouchableOpacity> */}
 

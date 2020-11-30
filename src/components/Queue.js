@@ -16,7 +16,7 @@ class Queue extends React.Component {
             <View style={styles.mainDiv} >
                 {/* image for the logo */}
                 <View>
-                    <Image style={styles.img} source={require("TeamUpRN/src/images/csgo.png")} />
+                    <Image style={styles.img} source={require("TeamUpRN/src/images/csgo.png")} onPress={() =>this.props.navigation.navigate('CSGoHome')} />
                 </View>
                 {/* maybe somebody can put data for each otheruser and another other user pops up for whoever is avail? */}
                 < OtherUser />

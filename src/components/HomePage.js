@@ -42,7 +42,7 @@ class HomePage extends React.Component {
                             title="Login" />
                     </View>
                     <View style={styles.buttons}>
-                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" />
+                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up"}/>
                     </View>
                 </View>
             </View >

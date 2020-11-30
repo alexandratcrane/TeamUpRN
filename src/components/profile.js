@@ -47,7 +47,7 @@ const Profile = () =>
 	return	(
   	<View style={{ flex: 1, backgroundColor: 'black', }}>
       	   <View style={styles.imageCont}>
-              <Image style={styles.image} source={require("TeamUpRN/src/images/profile.png")} />
+              <Image style={styles.image} source={require("TeamUpRN/src/images/profile.png")} onPress={() =>this.props.navigation.navigate('CSGoHome')}/>
             </View>
         	<View style={styles.informationContainer}>
               <Text style={[styles.text, { fontSize: 50 }]}>Username:</Text>
@@ -57,7 +57,7 @@ const Profile = () =>
             </View>
           <View style={styles.buttonCont}>
               <View style={styles.buttons}>
-                  <Button title="Edit" color="#DE9835" />
+                  <Button title="Edit" color="#DE9835" onPress={() =>this.props.navigation.navigate('Edit')}/>
               </View>
           </View>
     	</View>

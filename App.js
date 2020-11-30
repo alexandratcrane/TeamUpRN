@@ -21,11 +21,7 @@ import Queue from './src/components/Queue.js';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-
-// const Stack = createStackNavigator();
+//https://www.digitalocean.com/community/tutorials/react-react-native-navigation
 const Stack = createStackNavigator();
 
 
@@ -64,6 +60,7 @@ class App extends Component {
                 <Stack.Screen name="Queue" component={Queue} />
             </Stack.Navigator>
         </NavigationContainer>
+        <HomePage/>
 //        <StatusBar barStyle="dark-content" />
 //        <Queue />
 
