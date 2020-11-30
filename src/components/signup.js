@@ -45,8 +45,10 @@ const styles = StyleSheet.create({
     },
 });
 
-const Signup = () => {
+class Signup extends React.Component{
+    render(){
         return(
+        <>
             <View style={{ flex: 1, backgroundColor: 'black', }}>
                 <View style={{ flex: 1,}} style={styles.container}>
                     <TeamUpSVG width={200} height={250}/>
@@ -66,16 +68,13 @@ const Signup = () => {
                         placeholder="repeat password" />    
                     </View>
                     <View style={styles.buttons}>
-                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" 
-                            onPress={() =>
-                            // navigation for CSGo page. not final navigation site just to see if i can do it 
-                            this.props.navigation.navigate('CSGoHome.js')}
-                            title="sign up"
-                        />
+                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" onPress={() =>this.props.navigation.navigate('CSGoHome')}title="sign up"/>
                     </View>
                 </View>
             </View>
+            </>
         );
+        }
     }
 
 export default Signup;
