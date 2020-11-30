@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 
-
-const Profile = () =>
-{
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     imageCont:
     {
       justifyContent: 'center',
@@ -44,6 +41,9 @@ const Profile = () =>
       marginBottom: 50,
     },
   });
+
+class Profile extends React.Component{
+  render(){
 	return	(
   	<View style={{ flex: 1, backgroundColor: 'black', }}>
       	   <View style={styles.imageCont}>
@@ -62,5 +62,6 @@ const Profile = () =>
           </View>
     	</View>
   	);
+  	}
   }
  export default Profile;
