@@ -1,10 +1,7 @@
 <script src="http://localhost:8097"></script>
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button, Picker } from 'react-native';
-
-//the edit information
-const Edit = () => {
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     imageCont:
     {
       justifyContent: 'center',
@@ -43,7 +40,9 @@ const Edit = () => {
     },
   });
 
-
+//the edit information
+class Edit extends React.Component {
+render(){
     return (
       <View style={{ flex: 1, backgroundColor: 'black', }}>
         	   <View style={styles.imageCont}>
@@ -62,5 +61,6 @@ const Edit = () => {
             </View>
       	</View>
     );
+    }
    }
  export default Edit;

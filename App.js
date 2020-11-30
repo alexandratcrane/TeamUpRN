@@ -60,7 +60,7 @@ class App extends Component {
                 <Stack.Screen name="Queue" component={Queue} />
             </Stack.Navigator>
         </NavigationContainer>
-       
+
 
         {/* <SafeAreaView> */}
 
