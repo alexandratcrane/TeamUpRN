@@ -15,13 +15,14 @@ import CSGoHome from './src/components/CSGoHome.js';
 import Profile from './src/components/profile.js';
 import Edit from './src/components/edit.js';
 import Queue from './src/components/Queue.js';
-import Login from './src/components/login.js';
-import Signup from './src/components/signup.js';
 
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+//npm install @react-navigation/native@5.7.3
+// npm install @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
 
-// const Stack = createStackNavigator();
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+//https://www.digitalocean.com/community/tutorials/react-react-native-navigation
+const Stack = createStackNavigator();
 
 
 import {
@@ -50,9 +51,18 @@ class App extends Component {
       <>
         {/* navigation stuff imported in */}
         {/* <NavigationContainer> */}
-        {/*<StatusBar barStyle="dark-content" /> */}
-        {/*<Queue />*/}
-        <Signup />
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomePage} />
+                <Stack.Screen name="CSGoHome" component={CSGoHome} />
+                <Stack.Screen name="Profile" component={Profile} />
+                <Stack.Screen name="Edit" component={Edit} />
+                <Stack.Screen name="Queue" component={Queue} />
+            </Stack.Navigator>
+        </NavigationContainer>
+        <HomePage/>
+//        <StatusBar barStyle="dark-content" />
+//        <Queue />
 
         {/* <SafeAreaView> */}
 
