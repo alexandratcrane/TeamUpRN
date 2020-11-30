@@ -15,6 +15,8 @@ import CSGoHome from './src/components/CSGoHome.js';
 import Profile from './src/components/profile.js';
 import Edit from './src/components/edit.js';
 import Queue from './src/components/Queue.js';
+import Signup from './src/components/signup.js';
+import Login from './src/components/login.js';
 
 //npm install @react-navigation/native@5.7.3
 // npm install @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
@@ -54,6 +56,8 @@ class App extends Component {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={HomePage} />
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Signup" component={Signup} />
                 <Stack.Screen name="CSGoHome" component={CSGoHome} />
                 <Stack.Screen name="Profile" component={Profile} />
                 <Stack.Screen name="Edit" component={Edit} />

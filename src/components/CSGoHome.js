@@ -36,7 +36,7 @@ class CSGoHome extends React.Component {
                 </View>
                 <View style={{ alignItems: 'center', }}>
                     <View style={styles.buttons}>
-                        <Button title="Sign Out" color="#DE9835" />
+                        <Button title="Sign Out" color="#DE9835" onPress={() =>this.props.navigation.navigate('Home')} />
                     </View>
 
                 </View>
