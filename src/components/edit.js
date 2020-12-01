@@ -1,6 +1,19 @@
 <script src="http://localhost:8097"></script>
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, Button, Picker, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, Picker, TextInput, Alert } from 'react-native';
+
+const { user } = useAuth();
+const [profile, createProfile] = useState();
+
+const updateProfile = aysnc () => {
+  try {
+    const profile = await user.functions.createProfile(this.state.steamID, this.state.rank, this.state.role);
+    setProfile(profile);
+  } catch (err) {
+    Alert.alert("An error occurred while updating profile.")
+  }
+};
+
 const styles = StyleSheet.create({
     imageCont:
     {
@@ -59,24 +72,21 @@ const styles = StyleSheet.create({
 class Edit extends React.Component {
 
   state = {
-      username: '',
+      steamID: '',
       rank: '',
-      region: '',
       role: ''
    }
    handleUsername = (text) => {
-      this.setState({ username: text })
+      this.setState({ steamID: text })
    }
    handleRank = (text) => {
       this.setState({ Rank: text })
-   }
-   handleRegion = (text) => {
-      this.setState({ Region: text })
    }
    updateRole = (role) => {
       this.setState({ role: role })
    }
 
+   
 
 render(){
 
@@ -89,18 +99,8 @@ render(){
 
               <View style={styles.informationContainer}>
                     <TextInput style = {styles.input}
-                      onChangeText={this.handleUsername}
-                      placeholder="Username"
-                      placeholderTextColor = "#ffffff"
-                    />
-                    <TextInput style = {styles.input}
                       onChangeText={this.handleRank}
                       placeholder="Rank"
-                      placeholderTextColor = "#ffffff"
-                    />
-                    <TextInput style = {styles.input}
-                      onChangeText={this.handleRegion}
-                      placeholder="Region"
                       placeholderTextColor = "#ffffff"
                     />
                     <Picker style={styles.rolePick} selectedValue = {this.state.role} onValueChange = {this.updateRole}>
@@ -117,6 +117,7 @@ render(){
             <View style={styles.buttonCont}>
                 <View style={styles.buttons}>
                     <Button title="Done" color="#DE9835" onPress={() =>this.props.navigation.navigate('Profile')}/>
+                    <Button title="Save" color="#DE9835" onPress={updateProfile}/>
                 </View>
             </View>
       	</View>
