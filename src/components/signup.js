@@ -67,10 +67,10 @@ class Signup extends React.Component{
                     <TextInput style={styles.form}
                         placeholder="email address" 
 						onChangeText={(setEmail)} value={email} />
-					<TextInput style={styles.form}
+		    <TextInput style={styles.form}
                         placeholder="steam username" 
 						onChangeText={(setSteam)} value={steamID} />
-					<TextInput style={styles.form}
+		    <TextInput style={styles.form}
                         placeholder="Password" 
 						onChangeText={(text) => setPassword(text)} />
                     <TextInput style={styles.form}
