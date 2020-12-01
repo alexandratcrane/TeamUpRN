@@ -78,7 +78,7 @@ class Signup extends React.Component{
 						onChangeText={(setRank)} value={rank} />
                     <TextInput style={styles.form}
                         placeholder="Role" 
-						onChangeText={(setRole)} value={Role} />   
+						onChangeText={(setRole)} value={role} />   
                     </View>
                     <View style={styles.buttons}>
                         <Button color="#DE9B35" style={styles.buttons} title="Sign Up" onPress={() =>this.props.navigation.navigate('CSGoHome')}title="sign up"/>
