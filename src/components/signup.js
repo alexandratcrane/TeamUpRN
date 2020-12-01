@@ -48,10 +48,10 @@ const styles = StyleSheet.create({
 class Signup extends React.Component{
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const { user, signUp, signIn } = useAuth();
 	const [steamId, setSteam] = useState("");
 	const [rank, setRank] = useState("");
 	const [role, setRole] = useState("");
+	const { user, signUp, signIn } = useAuth();
     render(){
         return(
         <>
