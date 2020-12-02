@@ -16,10 +16,11 @@ class Queue extends React.Component {
             <View style={styles.mainDiv} >
                 {/* image for the logo */}
                 <View>
-                    <Image style={styles.img} source={require("TeamUpRN/src/images/csgo.png")} onPress={() =>this.props.navigation.navigate('CSGoHome')} />
+                    <Image style={styles.img} source={require("TeamUpRN/src/images/csgo.png")} onPress={() => this.props.navigation.navigate('CSGoHome')} />
                 </View>
                 {/* maybe somebody can put data for each otheruser and another other user pops up for whoever is avail? */}
-                < OtherUser />
+                < OtherUser name="cooluser99" rank="Silver III" />
+                < OtherUser name="lesscooluser" rank="Silver II" />
 
             </View >
 
