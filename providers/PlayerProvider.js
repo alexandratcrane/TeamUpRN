@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import Realm from "realm";
-import { Profile } from "./profileSchema";
+import { Profile } from "../profileSchema";
 import { useAuth } from "./AuthProvider";
 
 const PlayerContext = React.createContext(null);

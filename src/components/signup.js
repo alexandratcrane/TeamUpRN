@@ -45,49 +45,48 @@ const styles = StyleSheet.create({
     },
 });
 
-class Signup extends React.Component{
-	const {email, setEmail} = useState("");
-	const {password, setPassword} = useState("");
-	const {steamId, setSteam} = useState("");
-	const {rank, setRank} = useState("");
-	const {role, setRole} = useState("");
-	const { user, signUp, signIn } = useAuth();
-    render(){
-        return(
+const { email, setEmail } = useState("");
+const { password, setPassword } = useState("");
+const { steamId, setSteam } = useState("");
+const { rank, setRank } = useState("");
+const { role, setRole } = useState("");
+const { user, signUp, signIn } = useAuth();
+
+function Signup() {
+    return (
         <>
             <View style={{ flex: 1, backgroundColor: 'black', }}>
-                <View style={{ flex: 1,}} style={styles.container}>
-                    <TeamUpSVG width={200} height={250}/>
+                <View style={{ flex: 1, }} style={styles.container}>
+                    <TeamUpSVG width={200} height={250} />
                 </View>
-                <View style={{ flex: 3,}} style={styles.container}>
+                <View style={{ flex: 3, }} style={styles.container}>
                     <View>
                         <Text style={styles.text}>Sign Up</Text>
                     </View>
                     <View style={styles.container}>
-                    <TextInput style={styles.form}
-                        placeholder="email address" 
-						onChangeText={(setEmail)} value={email} />
-		    <TextInput style={styles.form}
-                        placeholder="steam username" 
-						onChangeText={(setSteam)} value={steamID} />
-		    <TextInput style={styles.form}
-                        placeholder="Password" 
-						onChangeText={(text) => setPassword(text)} />
-                    <TextInput style={styles.form}
-                        placeholder="Rank" 
-						onChangeText={(setRank)} value={rank} />
-                    <TextInput style={styles.form}
-                        placeholder="Role" 
-						onChangeText={(setRole)} value={role} />   
+                        <TextInput style={styles.form}
+                            placeholder="email address"
+                            onChangeText={(setEmail)} value={email} />
+                        <TextInput style={styles.form}
+                            placeholder="steam username"
+                            onChangeText={(setSteam)} value={steamID} />
+                        <TextInput style={styles.form}
+                            placeholder="Password"
+                            onChangeText={(text) => setPassword(text)} />
+                        <TextInput style={styles.form}
+                            placeholder="Rank"
+                            onChangeText={(setRank)} value={rank} />
+                        <TextInput style={styles.form}
+                            placeholder="Role"
+                            onChangeText={(setRole)} value={role} />
                     </View>
                     <View style={styles.buttons}>
-                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" onPress={() =>this.props.navigation.navigate('CSGoHome')}title="sign up"/>
+                        <Button color="#DE9B35" style={styles.buttons} title="Sign Up" onPress={() => this.props.navigation.navigate('CSGoHome')} title="sign up" />
                     </View>
                 </View>
             </View>
-            </>
-        );
-        }
-    }
+        </>
+    );
+};
 
 export default Signup;
