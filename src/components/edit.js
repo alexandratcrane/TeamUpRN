@@ -4,16 +4,6 @@ import { StyleSheet, Text, View, Image, Button, Picker, TextInput, Alert } from 
 
 const { user } = useAuth();
 const [profile, createProfile] = useState();
-
-const updateProfile = aysnc () => {
-  try {
-    const profile = await user.functions.createProfile(this.state.steamID, this.state.rank, this.state.role);
-    setProfile(profile);
-  } catch (err) {
-    Alert.alert("An error occurred while updating profile.")
-  }
-};
-
 const styles = StyleSheet.create({
     imageCont:
     {
@@ -70,6 +60,16 @@ const styles = StyleSheet.create({
 
 //the edit information
 class Edit extends React.Component {
+
+  async updateProfile () {
+    try {
+      await user.functions.createProfile(this.state.steamID, this.state.rank, this.state.role);
+      setProfile(profile);
+    } catch (err) {
+      Alert.alert("An error occurred while updating profile.");
+    }
+  };
+  
 
   state = {
       steamID: '',
