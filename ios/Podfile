@@ -8,26 +8,8 @@ target 'TeamUpReact' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'TeamUpReactTests' do
-    inherit! :complete
-    # Pods for testing
-  end
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
-  # Enables Flipper.
-  #
-  # Note that if you have use_frameworks! enabled, Flipper will not work and
-  # you should disable these next few lines.
-  use_flipper!
-  post_install do |installer|
-    flipper_post_install(installer)
-  end
-end
+  pod 'RealmJS', :path => '../node_modules/realm'
 
-target 'TeamUpReact-tvOS' do
-  # Pods for TeamUpReact-tvOS
-
-  target 'TeamUpReact-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 end

@@ -46,6 +46,12 @@ const styles = StyleSheet.create({
 });
 
 class Signup extends React.Component{
+	const {email, setEmail} = useState("");
+	const {password, setPassword} = useState("");
+	const {steamId, setSteam} = useState("");
+	const {rank, setRank} = useState("");
+	const {role, setRole} = useState("");
+	const { user, signUp, signIn } = useAuth();
     render(){
         return(
         <>
@@ -59,13 +65,20 @@ class Signup extends React.Component{
                     </View>
                     <View style={styles.container}>
                     <TextInput style={styles.form}
-                        placeholder="name" />
+                        placeholder="email address" 
+						onChangeText={(setEmail)} value={email} />
+		    <TextInput style={styles.form}
+                        placeholder="steam username" 
+						onChangeText={(setSteam)} value={steamID} />
+		    <TextInput style={styles.form}
+                        placeholder="Password" 
+						onChangeText={(text) => setPassword(text)} />
                     <TextInput style={styles.form}
-                        placeholder="steam username" />
+                        placeholder="Rank" 
+						onChangeText={(setRank)} value={rank} />
                     <TextInput style={styles.form}
-                        placeholder="password"/>
-                    <TextInput style={styles.form}
-                        placeholder="repeat password" />    
+                        placeholder="Role" 
+						onChangeText={(setRole)} value={role} />   
                     </View>
                     <View style={styles.buttons}>
                         <Button color="#DE9B35" style={styles.buttons} title="Sign Up" onPress={() =>this.props.navigation.navigate('CSGoHome')}title="sign up"/>

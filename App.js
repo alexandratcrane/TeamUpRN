@@ -17,6 +17,8 @@ import Edit from './src/components/edit.js';
 import Queue from './src/components/Queue.js';
 import Signup from './src/components/signup.js';
 import Login from './src/components/login.js';
+import AuthProvider from './providers/AuthProvider.js'
+import PlayerProvider from './providers/PlayerProvider.js'
 
 //npm install @react-navigation/native@5.7.3
 // npm install @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
