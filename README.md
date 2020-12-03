@@ -11,7 +11,12 @@ https://reactnative.dev/docs/environment-setup
 
 How to run:
 
-To run this application, you will need to have two command line windows open. On the **first window**, run the following command: 
+To run this application, you will first need to run 
+```
+npm install
+```
+
+To install all dependency packages. Next, open two command line windows. On the **first window**, run the following command: 
 
 Windows users:
 ```
