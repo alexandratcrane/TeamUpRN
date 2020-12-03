@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const udpateProfile = async () => {
+const updateProfile = async () => {
   try {
     await user.functions.createProfile(this.state.steamID, this.state.rank, this.state.role);
     setProfile(profile);
